@@ -1,5 +1,6 @@
 package Klkwc;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class SmartCalc {
@@ -9,10 +10,15 @@ public class SmartCalc {
 		private static double res;
 		public static double result;
 		
-		public static double podshet (double x, String com) {	
-		    numbers.add(x);	
+		public static double podshet (double x, String com)  {	
+		    
+			numbers.add(x);
+			String log = Double.toString(x);
+			Log.file(log,0);
 			func.add(com);
+			Log.file(com,0);
 			if (com=="=") { 
+				Log.file("\n\r", 1);
 				sdvig("*");
 				sdvig("/");
 				sdvig("-");

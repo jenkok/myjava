@@ -3,7 +3,7 @@ package Klkwc;
 	import java.awt.*;
 	import java.awt.event.*;
 	import javax.swing.*;
-
+	import java.io.IOException;
 	class Panel extends JPanel {
 				private JButton display;
 				private JPanel panel;
@@ -97,7 +97,13 @@ package Klkwc;
 						}
 						else 
 						{		
-							double r = SmartCalc.podshet(Double.parseDouble(display.getText()), command);
+							double r = 0;
+							try {
+								r = SmartCalc.podshet(Double.parseDouble(display.getText()), command);
+							} catch (NumberFormatException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 							String rr = Double.toString(r);
 							
 							

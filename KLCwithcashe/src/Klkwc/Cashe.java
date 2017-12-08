@@ -28,8 +28,8 @@ public class Cashe {
 		 //if (com=="=") {
 		 Virajenie v = new Virajenie(x, y, com);	
 		 int index = cashOne.indexOf(v);		
-		 System.out.println(cashOne.size());		
-		 System.out.println("arrayset="+index);
+		 //System.out.println(cashOne.size());		
+		 //System.out.println("arrayset="+index);
 			if (index==-1) {
 				if (cashOne.size()<5) {
 					Result r = new Result();
